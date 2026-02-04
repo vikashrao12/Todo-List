@@ -1,14 +1,18 @@
 import ToDoItem from "./ToDoItem";
 
-function ToDoList({ tasks }) {
+function ToDoList({ tasks, deleteTask, toggleTask, editTask }) {
   return (
     <div>
-      <h2>My Tasks</h2>
-
-      {tasks.length === 0 && <p>No tasks added yet</p>}
+      {tasks.length === 0 && <p>No tasks added</p>}
 
       {tasks.map((task) => (
-        <ToDoItem key={task.id} task={task} />
+        <ToDoItem
+          key={task.id}
+          task={task}
+          deleteTask={deleteTask}
+          toggleTask={toggleTask}
+          editTask={editTask}
+        />
       ))}
     </div>
   );
