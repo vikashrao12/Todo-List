@@ -34,5 +34,5 @@ The application allows users to:
 - npm install
 - npm run dev
   
-## GitHub repository link
+## GitHub repository link:
    https://github.com/vikashrao12/Todo-List
