@@ -1,11 +1,7 @@
-
-
-
-
-function ToDoItem() {
+function ToDoItem({ todo }) {
   return (
     <div>
-      <p>Sample Task</p>
+      <p>{todo.text}</p>
     </div>
   );
 }
