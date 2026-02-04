@@ -1,7 +1,7 @@
-function ToDoItem({ todo }) {
+function ToDoItem({ task }) {
   return (
     <div>
-      <p>{todo.text}</p>
+      <p>{task.text}</p>
     </div>
   );
 }

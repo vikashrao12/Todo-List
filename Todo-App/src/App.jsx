@@ -1,14 +1,17 @@
 import { useState } from "react";
 import Header from "./components/Header";
-import ToDoList from "./components/TodoList";
+import ToDoList from "./components/ToDoList";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [tasks, setTasks] = useState([
+    { id: 1, text: "Learn React", completed: false },
+    { id: 2, text: "Practice JavaScript", completed: false },
+  ]);
 
   return (
     <>
       <Header />
-      <ToDoList todos={todos} />
+      <ToDoList tasks={tasks} />
     </>
   );
 }
