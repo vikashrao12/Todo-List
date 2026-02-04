@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import ToDoList from "./components/ToDoList";
+import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -45,10 +46,10 @@ function App() {
   }
 
   return (
-    <>
+    <div className="container">
       <Header />
 
-      <div>
+      <div className="input-box">
         <input
           type="text"
           placeholder="Enter task"
@@ -64,7 +65,7 @@ function App() {
         toggleTask={toggleTask}
         editTask={editTask}
       />
-    </>
+    </div>
   );
 }
 

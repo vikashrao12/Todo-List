@@ -10,7 +10,7 @@ function ToDoItem({ task, deleteTask, toggleTask, editTask }) {
   }
 
   return (
-    <div>
+    <div className="task-item">
       <input
         type="checkbox"
         checked={task.completed}
@@ -18,20 +18,24 @@ function ToDoItem({ task, deleteTask, toggleTask, editTask }) {
       />
 
       {isEdit ? (
-        <>
-          <input
-            value={newText}
-            onChange={(e) => setNewText(e.target.value)}
-          />
-          <button onClick={saveEdit}>Save</button>
-        </>
+        <input
+          value={newText}
+          onChange={(e) => setNewText(e.target.value)}
+        />
       ) : (
-        <span style={{ textDecoration: task.completed ? "line-through" : "" }}>
+        <span
+          className={`task-text ${task.completed ? "completed" : ""}`}
+        >
           {task.text}
         </span>
       )}
 
-      <button onClick={() => setIsEdit(true)}>Edit</button>
+      {isEdit ? (
+        <button onClick={saveEdit}>Save</button>
+      ) : (
+        <button onClick={() => setIsEdit(true)}>Edit</button>
+      )}
+
       <button onClick={() => deleteTask(task.id)}>Delete</button>
     </div>
   );

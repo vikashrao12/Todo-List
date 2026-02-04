@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6a6565;
+}
+
+.container {
+  width: 400px;
+  margin: 40px auto;
+  background: rgb(227, 220, 220);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 8px;
+}
+
+.input-box button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.task-text {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-item button {
+  margin-left: 5px;
+  cursor: pointer;
+}
